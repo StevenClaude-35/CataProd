@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CataProd.Models.Produit>
+@{
+    ViewData["Title"] = "Produit";
+}
+
+<h1>Produit</h1>
+
+<div class="container">
+    <div class="col-md-10 col-md-offset-1 col-xl-12">
+    <div class="card card-primary">
+        <div class="card-header">Listes des Produits </div>
+        <div class="card-body">
+
+            <table class="table table table-bordered">
+                <tr>
+                    <th>ID</th>
+                    <th>DESIGNATION</th>
+                    <th>PRIX</th>
+                    <th>QUANTITE</th>
+                    <th>CAT</th>
+
+                </tr>
+                @{
+                    foreach (var p in Model)
+                    {
+                        <tr>
+                            <td>
+                                @p.ProduitID
+                            </td>
+                            <td>
+                                @p.Designation
+                            </td>
+                            <td>
+                                @p.Prix
+                            </td>
+                            <td>
+                                @p.Quantite
+                            </td>
+
+
+                        </tr>
+                    }
+                }
+            </table>
+
+        </div>
+        </div>
+    </div>
+    </div>
+
+
